@@ -11,7 +11,7 @@ function paralyzed_bind:check_for_paralyzed()
         self:toggle(own_data.paralyzed)
     end
     if own_data and own_data.editing ~= nil then
-        self.command = "**"
+        self.command = "~q"
         self:toggle(own_data.editing)
     end
 end
