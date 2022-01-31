@@ -2,7 +2,7 @@
 
 ### Opis
 
-Po rozpoczeciu czynnosci, ktora paralizuje ruch, uruchamia sie **functional bind** na `przestan`.
+Po rozpoczeciu czynnosci, ktora paralizuje ruch, uruchamia sie **functional bind** na `przestan`. Edycja ustawia bind na `**`
 
 W czasie paralizu dolny bar podswietla sie na czerwono.
 
