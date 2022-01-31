@@ -1,14 +1,17 @@
 paralyzed_bind = paralyzed_bind or {
     triggers = {},
+    comnand = {},
     state = {}
 }
 
 function paralyzed_bind:check_for_paralyzed()
     local own_data = gmcp.objects.data[tostring(ateam.my_id)]
     if own_data and own_data.paralyzed ~= nil then
+        self.command = "przestan"
         self:toggle(own_data.paralyzed)
     end
     if own_data and own_data.editing ~= nil then
+        self.command = "**"
         self:toggle(own_data.editing)
     end
 end
@@ -22,7 +25,7 @@ function paralyzed_bind:toggle(state)
 end
 
 function paralyzed_bind:on()
-    scripts.utils.bind_functional("przestan", silent)
+    scripts.utils.bind_functional(self.command, silent)
     self:dim_map_on()
 end
 
